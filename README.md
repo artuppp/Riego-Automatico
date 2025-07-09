@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <img src="https://imgur.com/a/dQFuA4z" alt="Web Interface Demo" width="700"/>
+  <img src="https://i.imgur.com/g3oD4KV.jpeg" alt="Web Interface Demo" width="700"/>
 </p>
 
 <h1 align="center">🌿 ESP32 Smart Irrigation System <sub>v1.0</sub></h1>
