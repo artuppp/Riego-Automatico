@@ -1,8 +1,8 @@
 <p align="center">
-  <!-- Reemplaza YOUR_USERNAME/YOUR_REPO_NAME con tu usuario y repositorio de GitHub -->
-  <a href="https://github.com/artuppp/Riego-automatico"><img src="https://img.shields.io/badge/ESP32_Riego_Inteligente-v1.0-blueviolet"/></a>
-  <a href="https://github.com/artuppp/Riego-automatico"><img src="https://img.shields.io/badge/código-Fuente-yellowgreen"/></a>
-  <a href="#%EF%B8%8F-licencia"><img src="https://img.shields.io/badge/licencia-MIT-green"/></a>
+  <!-- Badges for the English version -->
+  <a href="https://github.com/artuppp/Riego-automatico"><img src="https://img.shields.io/badge/ESP32_Smart_Irrigation-v1.0-blueviolet"/></a>
+  <a href="https://github.com/artuppp/Riego-automatico"><img src="https://img.shields.io/badge/code-Source-yellowgreen"/></a>
+  <a href="#-license"><img src="https://img.shields.io/badge/license-MIT-green"/></a>
   <a href="https://github.com/artuppp/Riego-automatico/commits/main"><img src="https://img.shields.io/github/last-commit/artuppp/Riego-Automatico"/></a>
   <br>
   <a href="https://github.com/artuppp/Riego-automatico/stargazers"><img src="https://img.shields.io/github/stars/artuppp/Riego-Automatico?style=social"/></a>
@@ -11,119 +11,119 @@
   <a href="https://github.com/artuppp/Riego-automatico/issues"><img src="https://img.shields.io/github/issues/artuppp/Riego-Automatico"/></a>
 </p>
 
-<!-- <p align="center">
-  <img src="https://i.imgur.com/uSwn217.png" alt="Demo de la Interfaz Web" width="700"/>
-</p> -->
+<p align="center">
+  <img src="https://i.imgur.com/uSwn217.png" alt="Web Interface Demo" width="700"/>
+</p>
 
-<h1 align="center">🌿 Sistema de Riego Inteligente para ESP32 <sub>v1.0</sub></h1>
+<h1 align="center">🌿 ESP32 Smart Irrigation System <sub>v1.0</sub></h1>
 
 <p align="center">
-  <i>Controla y monitoriza tus plantas con una interfaz web completa, gráficos históricos y lógica de riego flexible.</i>
+  <i>Control and monitor your plants with a complete web interface, historical graphs, and flexible watering logic.</i>
 </p>
 <hr>
 
-Un completo y robusto sistema de riego automático basado en la placa ESP32. Controla y monitoriza tus plantas a través de una intuitiva **interfaz web**, accesible desde cualquier dispositivo en tu red local. Ideal para huertos urbanos, macetas o pequeños jardines.
+A complete and robust automatic irrigation system based on the ESP32 board. Control and monitor your plants through an intuitive **web interface**, accessible from any device on your local network. Ideal for urban gardens, potted plants, or small flowerbeds.
 
-## ✨ Características Principales
+## ✨ Key Features
 
-*   **Interfaz Web Completa:** Panel de control moderno y responsive (adaptable a móvil) construido con Bootstrap y Chart.js.
-*   **Monitorización en Tiempo Real:** Visualiza al instante la temperatura, la humedad ambiental y la humedad del suelo.
-*   **Gráficos Históricos:** Gráficos interactivos que muestran las tendencias de las últimas 24 horas para todos los sensores, actualizados cada minuto.
-*   **Control de Riego Flexible:**
-    *   **Modo Manual:** Activa o desactiva el riego con un solo clic.
-    *   **Modo Automático por Humedad:** Define un umbral de humedad del suelo; el sistema regará automáticamente cuando sea necesario.
-    *   **Modo Automático por Horario:** Programa hasta dos riegos diarios a las horas que prefieras.
-*   **Configuración Persistente:** Todos tus ajustes (umbral, duración, horarios) se guardan en la memoria no volátil del ESP32 y se conservan tras un reinicio.
-*   **Código Eficiente:** El `loop()` principal es no bloqueante, permitiendo que el servidor web y la lógica de control se ejecuten de forma fluida y simultánea.
-*   **Sincronización Horaria:** Obtiene la hora exacta de internet (NTP) para una programación precisa de los riegos.
+*   **Complete Web Interface:** A modern and responsive control panel (mobile-friendly) built with Bootstrap and Chart.js.
+*   **Real-Time Monitoring:** Instantly view temperature, ambient humidity, and soil moisture levels.
+*   **Historical Graphs:** Interactive charts display the trends of all sensors over the last 24 hours, updated every minute.
+*   **Flexible Watering Control:**
+    *   **Manual Mode:** Turn the watering on or off with a single click.
+    *   **Humidity-Based Automatic Mode:** Set a soil moisture threshold; the system will water automatically when needed.
+    *   **Schedule-Based Automatic Mode:** Program up to two daily watering cycles at your preferred times.
+*   **Persistent Configuration:** All your settings (threshold, duration, schedules) are saved to the ESP32's non-volatile memory and are retained after a reboot.
+*   **Efficient Code:** The main `loop()` is non-blocking, allowing the web server and control logic to run smoothly and simultaneously.
+*   **Time Synchronization:** Obtains the exact time from the internet (NTP) for precise watering schedules.
 
 ---
 
-## 🛠️ Componentes Necesarios
+## 🛠️ Required Components
 
-| Componente                | Descripción                                                   |
+| Component                | Description                                                   |
 | :------------------------ | :------------------------------------------------------------ |
-| **Placa de Desarrollo**   | ESP32 (cualquier variante con WiFi)                           |
-| **Sensor de Temp/Hum.**   | DHT22 (o DHT11, ajustando `DHTTYPE` en el código)             |
-| **Sensor de Humedad**     | Sensor de humedad de suelo capacitivo (recomendado)           |
-| **Actuador**              | Módulo de relé de 1 canal (5V o 3.3V)                         |
-| **Bomba / Electroválvula**| Una pequeña bomba de agua de 5V/12V o una electroválvula       |
-| **Fuente de Alimentación**| Externa para la bomba/electroválvula.                         |
-| **Cables y Protoboard**   | Cables de conexión (jumpers) y protoboard para el montaje.    |
+| **Development Board**     | ESP32 (any variant with WiFi)                                 |
+| **Temp/Hum Sensor**       | DHT22 (or DHT11, by adjusting `DHTTYPE` in the code)          |
+| **Moisture Sensor**       | Capacitive soil moisture sensor (recommended over resistive)  |
+| **Actuator**              | 1-Channel Relay Module (5V or 3.3V)                           |
+| **Pump / Solenoid Valve** | A small 5V/12V water pump or a solenoid valve                 |
+| **Power Supply**          | External supply for the pump/solenoid valve.                  |
+| **Jumper Wires & Breadboard**| For making the connections.                               |
 
 ---
 
-## 🔌 Diagrama de Conexiones
+## 🔌 Connection Diagram
 
-Asegúrate de conectar los componentes a los pines correctos del ESP32 según se define en el código.
+Make sure to connect the components to the correct ESP32 pins as defined in the code.
 
-| Componente             | Pin del Componente | Pin del ESP32 |
-| :--------------------- | :----------------- | :------------ |
-| **Sensor DHT22**       | DATA               | `GPIO 4`      |
-| **Módulo de Relé**     | IN                 | `GPIO 12`     |
-| **Sensor de Suelo**    | AOUT (Analógico)   | `GPIO 34`     |
+| Component             | Component Pin      | ESP32 Pin     |
+| :-------------------- | :----------------- | :------------ |
+| **DHT22 Sensor**      | DATA               | `GPIO 4`      |
+| **Relay Module**      | IN                 | `GPIO 12`     |
+| **Soil Sensor**       | AOUT (Analog)      | `GPIO 34`     |
 
-**Notas Importantes:**
-*   Conecta el `VCC` y `GND` de los sensores y el relé a los pines `3.3V` (o `5V`, según el módulo) y `GND` del ESP32 respectivamente.
-*   **¡Nunca alimentes la bomba o electroválvula directamente desde el ESP32!** Usa el relé como un interruptor y una fuente de alimentación externa para la carga.
+**Important Notes:**
+*   Connect the `VCC` and `GND` of the sensors and the relay to the `3.3V` (or `5V`, depending on the module) and `GND` pins of the ESP32, respectively.
+*   **Never power the pump or solenoid valve directly from the ESP32!** Use the relay as a switch and an external power supply for the load.
 
 ---
 
-## 🚀 Puesta en Marcha
+## 🚀 Getting Started
 
-1.  **Configura tu Entorno:**
-    *   Abre el proyecto en el [IDE de Arduino](https://www.arduino.cc/en/software) o [PlatformIO](https://platformio.org/).
-    *   Asegúrate de tener instalado el soporte para placas ESP32.
-    *   Instala la librería **"DHT sensor library" de Adafruit** desde el gestor de librerías. Las demás librerías (`WiFi`, `WebServer`, etc.) ya vienen incluidas con el core de ESP32.
+1.  **Set Up Your Environment:**
+    *   Open the project in the [Arduino IDE](https://www.arduino.cc/en/software) or [PlatformIO](https://platformio.org/).
+    *   Ensure you have the ESP32 board support package installed.
+    *   Install the **"DHT sensor library" by Adafruit** from the library manager. Other libraries (`WiFi`, `WebServer`, etc.) are included with the ESP32 core.
 
-2.  **Modifica las Credenciales WiFi:**
-    *   Abre el archivo de código y modifica las siguientes líneas con el nombre y la contraseña de tu red WiFi:
+2.  **Modify WiFi Credentials:**
+    *   Open the code file and modify the following lines with your WiFi network's name and password:
     ```cpp
-    // --- CONFIGURACIÓN DE RED ---
-    #define WIFI_SSID "TU_RED_WIFI"
-    #define WIFI_PASSWORD "TU_CONTRASEÑA"
+    // --- NETWORK CONFIGURATION ---
+    #define WIFI_SSID "YOUR_SSID"
+    #define WIFI_PASSWORD "YOUR_PASSWORD"
     ```
 
-3.  **Compila y Sube el Código:**
-    *   Selecciona tu placa ESP32 y el puerto COM correcto.
-    *   Pulsa el botón de subir.
+3.  **Compile and Upload the Code:**
+    *   Select your ESP32 board and the correct COM port.
+    *   Click the upload button.
 
-4.  **Encuentra la Dirección IP:**
-    *   Abre el **Monitor Serie** (baud rate: 115200).
-    *   Una vez conectado al WiFi, el ESP32 imprimirá su dirección IP.
+4.  **Find the IP Address:**
+    *   Open the **Serial Monitor** (baud rate: 115200).
+    *   Once connected to WiFi, the ESP32 will print its IP address.
     ```
-    Conectando a WiFi...
+    Connecting to WiFi...
     ...
-    WiFi conectado. IP: 192.168.1.123
+    WiFi connected. IP: 192.168.1.123
     ```
 
-5.  **¡A Controlar!**
-    *   Abre un navegador web en tu ordenador o móvil (conectado a la misma red WiFi) y navega a la dirección IP que obtuviste. ¡Ya estás en el panel de control!
+5.  **Take Control!**
+    *   Open a web browser on your computer or phone (connected to the same WiFi network) and navigate to the IP address you obtained. You are now in the control panel!
 
 ---
 
-## ⚙️ ¿Cómo Funciona la Interfaz?
+## ⚙️ How the Interface Works
 
-La interfaz web está dividida en varias secciones claras:
+The web interface is divided into several clear sections:
 
-*   **Gráficos de 24h:** Tres gráficos muestran la evolución de la temperatura, humedad ambiental y humedad del suelo. Se actualizan automáticamente cada minuto.
-*   **Estado Actual:** Muestra los valores más recientes de los sensores y el estado del relé (riego `ACTIVO` o `APAGADO`). Si el riego está activo, mostrará una cuenta atrás.
-*   **Control Manual:** Botones para forzar el encendido (por la duración configurada) o el apagado inmediato del riego.
-*   **Configuración:**
-    *   **Umbral de Humedad:** Establece el valor del sensor de suelo por debajo del cual se activará el riego automático.
-    *   **Duración del Riego:** Define cuántos minutos durará cada ciclo de riego (manual o automático).
-*   **Programación de Horarios:** Configura las dos horas del día en las que quieres que se active un ciclo de riego.
+*   **24h-Graphs:** Three charts show the evolution of temperature, ambient humidity, and soil moisture. They update automatically every minute.
+*   **Current Status:** Displays the most recent sensor readings and the relay's status (watering `ACTIVE` or `OFF`). If watering is active, it will show a countdown timer.
+*   **Manual Control:** Buttons to force watering on (for the configured duration) or turn it off immediately.
+*   **Configuration:**
+    *   **Humidity Threshold:** Sets the soil sensor value below which automatic watering will be triggered.
+    *   **Watering Duration:** Defines how many minutes each watering cycle (manual or automatic) will last.
+*   **Schedule Programming:** Configure the two times of day when you want a watering cycle to be activated.
 
-Todos los cambios en la configuración se guardan automáticamente en la memoria del ESP32.
+All configuration changes are automatically saved to the ESP32's memory.
 
 ---
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto se distribuye bajo la **Licencia MIT**. Siéntete libre de usarlo, modificarlo y distribuirlo.
+This project is distributed under the **MIT License**. Feel free to use, modify, and distribute it.
 
 ---
 
 <p align="center">
-  Creado con ❤️ para plantas más felices.
+  Made with ❤️ for happier plants.
 </p>
