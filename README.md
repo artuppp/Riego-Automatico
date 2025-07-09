@@ -3,17 +3,17 @@
   <a href="https://github.com/artuppp/Riego-automatico"><img src="https://img.shields.io/badge/ESP32_Riego_Inteligente-v1.0-blueviolet"/></a>
   <a href="https://github.com/artuppp/Riego-automatico"><img src="https://img.shields.io/badge/código-Fuente-yellowgreen"/></a>
   <a href="#%EF%B8%8F-licencia"><img src="https://img.shields.io/badge/licencia-MIT-green"/></a>
-  <a href="https://github.com/artuppp/Riego-automatico/commits/main"><img src="https://img.shields.io/github/last-commit/YOUR_USERNAME/YOUR_REPO_NAME"/></a>
+  <a href="https://github.com/artuppp/Riego-automatico/commits/main"><img src="https://img.shields.io/github/last-commit/artuppp/Riego-Automatico"/></a>
   <br>
-  <a href="https://github.com/artuppp/Riego-automatico/stargazers"><img src="https://img.shields.io/github/stars/YOUR_USERNAME/YOUR_REPO_NAME?style=social"/></a>
-  <a href="https://github.com/artuppp/Riego-automatico/network/members"><img src="https://img.shields.io/github/forks/YOUR_USERNAME/YOUR_REPO_NAME?style=social"/></a>
-  <a href="https://github.com/artuppp/Riego-automatico/watchers"><img src="https://img.shields.io/github/watchers/YOUR_USERNAME/YOUR_REPO_NAME?style=social"/></a>
-  <a href="https://github.com/artuppp/Riego-automatico/issues"><img src="https://img.shields.io/github/issues/YOUR_USERNAME/YOUR_REPO_NAME"/></a>
+  <a href="https://github.com/artuppp/Riego-automatico/stargazers"><img src="https://img.shields.io/github/stars/artuppp/Riego-Automatico?style=social"/></a>
+  <a href="https://github.com/artuppp/Riego-automatico/network/members"><img src="https://img.shields.io/github/forks/artuppp/Riego-Automatico?style=social"/></a>
+  <a href="https://github.com/artuppp/Riego-automatico/watchers"><img src="https://img.shields.io/github/watchers/artuppp/Riego-Automatico?style=social"/></a>
+  <a href="https://github.com/artuppp/Riego-automatico/issues"><img src="https://img.shields.io/github/issues/artuppp/Riego-Automatico"/></a>
 </p>
 
-<p align="center">
+<!-- <p align="center">
   <img src="https://i.imgur.com/uSwn217.png" alt="Demo de la Interfaz Web" width="700"/>
-</p>
+</p> -->
 
 <h1 align="center">🌿 Sistema de Riego Inteligente para ESP32 <sub>v1.0</sub></h1>
 
